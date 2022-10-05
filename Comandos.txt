@@ -1,0 +1,16 @@
+Estos son algunos comandos para simplificar la conexión de la máquina y poder entrar sin contraseña:
+---------------------------------------------------------------------------------------------------
+
+SIMPLIFICAR CONEXIÓN:
+
+En la MAQUINA LOCAL, introduce lo siguiente: vim ~/.ssh/config -> Host nombre de maquina
+                     HostName ip de la maquina
+                     User usuario/root
+----------------------------------------------
+
+ENTRAR SIN NECESIDAD DE CONTRASEÑA:
+
+En la MAQUINA LOCAL, introduce lo siguiente: ssh-keygen -t rsa y pulsa enter 3 veces.
+- Para copiar la key que generamos, introduce lo siguiente: ssh-copy-id -i ~/.ssh/id_rsa.pub usuario@10.6.xxx.xxx. Luego introduce la password de la MAQUINA VIRTUAL.
+- Una vez hecho, exit y nos conectamos a la MAQUINA VIRTUAL y verás que se conecta automáticamente.
+---------------------------------------------------------------------------------------------------------	
